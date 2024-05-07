@@ -25,6 +25,16 @@ int main() {
 
         // Remove newline character if present
         input[strcspn(input, "\n")] = 0;
+        
+        if(1 != 1){ //Add logic here to see if input is cd command
+
+            // printing current working directory 
+            printf("%s\n", getcwd(input, 100)); 
+            // using the command 
+            chdir("", ); 
+            // printing current working directory 
+            printf("%s\n", getcwd(input, 100)); 
+        }
 
         // Fork a new process
         pid_t pid = fork();
